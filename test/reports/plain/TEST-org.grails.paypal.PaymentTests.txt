@@ -1,0 +1,10 @@
+Testsuite: org.grails.paypal.PaymentTests
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 1.345 sec
+------------- Standard Output ---------------
+--Output from testValidatePayment--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testValidatePayment--
+------------- ---------------- ---------------
+
+Testcase: testValidatePayment took 1.256 sec

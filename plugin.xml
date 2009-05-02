@@ -1,0 +1,18 @@
+<plugin name='paypal' version='0.1' grailsVersion='1.1 &gt; *'>
+  <author>Your name</author>
+  <title>Plugin summary/headline</title>
+  <description>\
+Brief description of the plugin.
+</description>
+  <documentation>http://grails.org/Paypal+Plugin</documentation>
+  <resources>
+    <resource>Config</resource>
+    <resource>DataSource</resource>
+    <resource>PaypalUrlMappings</resource>
+    <resource>org.grails.paypal.PaypalController</resource>
+    <resource>org.grails.paypal.Payment</resource>
+    <resource>org.grails.paypal.PaymentItem</resource>
+    <resource>org.grails.paypal.PaypalTagLib</resource>
+  </resources>
+  <dependencies />
+</plugin>

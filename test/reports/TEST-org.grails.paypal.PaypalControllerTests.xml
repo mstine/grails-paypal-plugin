@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="A38103.local" name="org.grails.paypal.PaypalControllerTests" tests="3" time="0.696" timestamp="2009-05-02T05:34:18">
+  <properties />
+  <testcase classname="org.grails.paypal.PaypalControllerTests" name="testBuyInvalidPayment" time="0.126" />
+  <testcase classname="org.grails.paypal.PaypalControllerTests" name="testBuyValidPayment" time="0.386" />
+  <testcase classname="org.grails.paypal.PaypalControllerTests" name="testUploadCartValidPayment" time="0.131" />
+  <system-out><![CDATA[--Output from testBuyInvalidPayment--
+--Output from testBuyValidPayment--
+--Output from testUploadCartValidPayment--
+]]></system-out>
+  <system-err><![CDATA[--Output from testBuyInvalidPayment--
+--Output from testBuyValidPayment--
+--Output from testUploadCartValidPayment--
+]]></system-err>
+</testsuite>

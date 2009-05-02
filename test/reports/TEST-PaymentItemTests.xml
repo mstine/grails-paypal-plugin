@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="0" failures="0" hostname="A38103.local" name="PaymentItemTests" tests="1" time="0.162" timestamp="2009-05-02T05:34:05">
+  <properties />
+  <testcase classname="PaymentItemTests" name="testSomething" time="0.161" />
+  <system-out><![CDATA[--Output from testSomething--
+]]></system-out>
+  <system-err><![CDATA[--Output from testSomething--
+]]></system-err>
+</testsuite>
