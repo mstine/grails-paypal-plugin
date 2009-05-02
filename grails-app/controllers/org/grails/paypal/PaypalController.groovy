@@ -163,7 +163,7 @@ REQUEST INFO: ${params}
 		}
 	}
 	
-	def uploadCart = {
+	def uploadCart = { ShippingAddressCommand address ->
 		//Assumes the Payment has been pre-populated and saved by whatever cart mechanism
 		//you are using...		
 		def	payment = Payment.findByTransactionId(params.transactionId) 
@@ -190,6 +190,23 @@ REQUEST INFO: ${params}
 		url << "cmd=_cart&upload=1&"
 		url << "business=$login&"
 		
+		if (params.addressOverride) {
+			url << "address_override=1&"
+			url << "first_name=${address.firstName}&"
+			url << "last_name=${address.lastName}&"
+			url << "address1=${address.addressLineOne}&"
+			url << "address2=${address.addressLineTwo}&"
+			url << "city=${address.city}&"
+			url << "country=${address.country}&"
+			url << "night_phone_a=${address.areaCode}&"
+			url << "night_phone_b=${address.phonePrefix}&"
+			url << "night_phone_c=${address.phoneSuffix}&"
+			url << "state=${address.state}&"
+			url << "zip=${address.zipCode}&"
+		} else if (params.noShipping) {
+			url << "no_shipping=1&"
+		}
+		
 		payment.paymentItems.eachWithIndex { paymentItem, i ->
 			def itemId = i + 1
 			url << "item_name_${itemId}=${paymentItem.itemName}&"			
@@ -208,4 +225,31 @@ REQUEST INFO: ${params}
 		redirect(url:url)	
 	}
 	
+}
+
+class ShippingAddressCommand {	
+	String firstName
+	String lastName
+	String addressLineOne
+	String addressLineTwo
+	String city
+	USState state
+	String country = 'US'
+	String zipCode
+	String areaCode
+	String phonePrefix
+	String phoneSuffix
+	
+	static constraints = {
+		firstName(blank:false)
+		lastName(blank:false)
+		addressLineOne(blank:false)
+		addressLineTwo(nullable:true,blank:true)
+		city(blank:false)
+		country(blank:false)
+		zipCode(blank:false,matches:/\d{5}/)
+		areaCode(blank:false,matches:/\d{3}/)
+		phonePrefix(blank:false,matches:/\d{3}/)
+		phoneSuffix(blank:false,matches:/\d{4}/)		
+	}	
 }

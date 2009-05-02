@@ -7,13 +7,16 @@ class PaypalGrailsPlugin {
     def dependsOn = [:]
     // resources that are excluded from plugin packaging
     def pluginExcludes = [
-            "grails-app/views/error.gsp"
+			"grails-app/conf/Config.groovy",
+			"grails-app/conf/DataSource/groovy",
+			"grails-app/views/paypal/test.gsp",
+            "grails-app/views/error.gsp",
+			"grails-app/web-app/*"
     ]
 
     // TODO Fill in these fields
     def author = "Matt Stine (originally by Graeme Rocher)"
     def authorEmail = "matt@mattstine.com"
-    def title = "Plugin summary/headline"
     def title = "A Grails plug-in that provides integration with Paypal's Instant Payment Notfication (IPN) system"
     def description = '''\
 This plug-in allows Grails applications to integrate with Paypal and its Instant Payment Notification (IPN) system.

@@ -1,8 +1,18 @@
-<plugin name='paypal' version='0.1' grailsVersion='1.1 &gt; *'>
-  <author>Your name</author>
-  <title>Plugin summary/headline</title>
-  <description>\
-Brief description of the plugin.
+<plugin name='paypal' version='0.3-SNAPSHOT' grailsVersion='1.1 &gt; *'>
+  <author>Matt Stine (originally by Graeme Rocher)</author>
+  <authorEmail>matt@mattstine.com</authorEmail>
+  <title>A Grails plug-in that provides integration with Paypal's Instant Payment Notfication (IPN) system</title>
+  <description>This plug-in allows Grails applications to integrate with Paypal and its Instant Payment Notification (IPN) system.
+
+A PayPalController is provided that has a "notify" action which deals with responses from the PayPal IPN. In order for this to function
+you need to enable IPN in your PayPal Profile under Profile / Instant Payment Notification Preferences and provide PayPal with the URL
+you have mapped the "notify" action to.
+
+In order for this plug-in to function you must configure the following settings in Config.groovy:
+
+* grails.paypal.server - The URL of the paypal server 
+* grails.paypal.email - The email of the merchant account
+* grails.serverURL - The server URL for production 
 </description>
   <documentation>http://grails.org/Paypal+Plugin</documentation>
   <resources>
@@ -10,6 +20,7 @@ Brief description of the plugin.
     <resource>DataSource</resource>
     <resource>PaypalUrlMappings</resource>
     <resource>org.grails.paypal.PaypalController</resource>
+    <resource>org.grails.paypal.USState</resource>
     <resource>org.grails.paypal.Payment</resource>
     <resource>org.grails.paypal.PaymentItem</resource>
     <resource>org.grails.paypal.PaypalTagLib</resource>
