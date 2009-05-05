@@ -100,7 +100,16 @@ REQUEST INFO: ${params}
 			if(payment.status != Payment.COMPLETE) {
 				payment.status = Payment.CANCELLED
 				payment.save(flush:true)				
-				return [payment:payment]				
+				if(params.cancelAction || params.cancelController) {
+					def args = [:]
+					if(params.cancelAction) args.action = params.cancelAction
+					if(params.cancelController) args.controller = params.cancelController				
+					args.params = params
+					redirect(args)
+				}
+				else {
+					return [payment:payment]				
+				}				
 			}
 			else {
 				response.sendError 403				
@@ -181,6 +190,12 @@ REQUEST INFO: ${params}
 		}
 		if(params.returnController) {
 			commonParams.returnController = params.returnController
+		}
+		if(params.cancelAction) {
+			commonParams.cancelAction = params.cancelAction
+		}
+		if(params.cancelController) {
+			commonParams.cancelController = params.cancelController
 		}			
 		def notifyURL = g.createLink(absolute:true, controller:'paypal', action:'notify', params:commonParams).encodeAsURL()
 		def successURL = g.createLink(absolute:true, controller:'paypal', action:'success', params:commonParams).encodeAsURL()			
@@ -195,7 +210,9 @@ REQUEST INFO: ${params}
 			url << "first_name=${address.firstName}&"
 			url << "last_name=${address.lastName}&"
 			url << "address1=${address.addressLineOne}&"
-			url << "address2=${address.addressLineTwo}&"
+			if (address.addressLineTwo) {
+				url << "address2=${address.addressLineTwo}&"
+			}
 			url << "city=${address.city}&"
 			url << "country=${address.country}&"
 			url << "night_phone_a=${address.areaCode}&"
@@ -218,7 +235,8 @@ REQUEST INFO: ${params}
 		url << "currency_code=${payment.currency}&"						
 		url << "notify_url=${notifyURL}&"									
 		url << "return=${successURL}&"										
-		url << "cancel_return=${cancelURL}"
+		url << "cancel_return=${cancelURL}&"
+		url << "rm=2"
 			
 		log.debug "Redirection to PayPal with URL: $url"	
 			

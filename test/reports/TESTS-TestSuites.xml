@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" hostname="A38103.local" id="0" name="PaymentItemTests" package="" tests="1" time="0.3" timestamp="2009-05-02T21:27:34">
+  <testsuite errors="0" failures="0" hostname="A38103.local" id="0" name="PaymentItemTests" package="" tests="1" time="0.192" timestamp="2009-05-05T02:55:24">
       <properties />
 
-      <testcase classname="PaymentItemTests" name="testSomething" time="0.299" />
+      <testcase classname="PaymentItemTests" name="testSomething" time="0.191" />
 
       <system-out><![CDATA[--Output from testSomething--
 ]]></system-out>
@@ -12,10 +12,10 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="A38103.local" id="1" name="PaymentTests" package="org.grails.paypal" tests="1" time="1.073" timestamp="2009-05-02T21:27:47">
+  <testsuite errors="0" failures="0" hostname="A38103.local" id="1" name="PaymentTests" package="org.grails.paypal" tests="1" time="1.308" timestamp="2009-05-05T02:55:41">
       <properties />
 
-      <testcase classname="org.grails.paypal.PaymentTests" name="testValidatePayment" time="0.993" />
+      <testcase classname="org.grails.paypal.PaymentTests" name="testValidatePayment" time="1.261" />
 
       <system-out><![CDATA[--Output from testValidatePayment--
 ]]></system-out>
@@ -24,18 +24,18 @@
 ]]></system-err>
 
   </testsuite>
-  <testsuite errors="0" failures="0" hostname="A38103.local" id="2" name="PaypalControllerTests" package="org.grails.paypal" tests="5" time="0.908" timestamp="2009-05-02T21:27:48">
+  <testsuite errors="0" failures="0" hostname="A38103.local" id="2" name="PaypalControllerTests" package="org.grails.paypal" tests="5" time="1.012" timestamp="2009-05-05T02:55:42">
       <properties />
 
-      <testcase classname="org.grails.paypal.PaypalControllerTests" name="testBuyInvalidPayment" time="0.16" />
+      <testcase classname="org.grails.paypal.PaypalControllerTests" name="testBuyInvalidPayment" time="0.202" />
 
-      <testcase classname="org.grails.paypal.PaypalControllerTests" name="testBuyValidPayment" time="0.488" />
+      <testcase classname="org.grails.paypal.PaypalControllerTests" name="testBuyValidPayment" time="0.372" />
 
-      <testcase classname="org.grails.paypal.PaypalControllerTests" name="testUploadCartNoShipping" time="0.126" />
+      <testcase classname="org.grails.paypal.PaypalControllerTests" name="testUploadCartNoShipping" time="0.131" />
 
-      <testcase classname="org.grails.paypal.PaypalControllerTests" name="testUploadCartValidPayment" time="0.022" />
+      <testcase classname="org.grails.paypal.PaypalControllerTests" name="testUploadCartValidPayment" time="0.075" />
 
-      <testcase classname="org.grails.paypal.PaypalControllerTests" name="testUploadCartWithShippingAddress" time="0.061" />
+      <testcase classname="org.grails.paypal.PaypalControllerTests" name="testUploadCartWithShippingAddress" time="0.063" />
 
       <system-out><![CDATA[--Output from testBuyInvalidPayment--
 --Output from testBuyValidPayment--

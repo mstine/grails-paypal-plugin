@@ -1,16 +1,22 @@
 Testsuite: org.grails.paypal.PaypalControllerTests
-Tests run: 3, Failures: 0, Errors: 0, Time elapsed: 0.696 sec
+Tests run: 5, Failures: 0, Errors: 0, Time elapsed: 1.012 sec
 ------------- Standard Output ---------------
 --Output from testBuyInvalidPayment--
 --Output from testBuyValidPayment--
+--Output from testUploadCartNoShipping--
 --Output from testUploadCartValidPayment--
+--Output from testUploadCartWithShippingAddress--
 ------------- ---------------- ---------------
 ------------- Standard Error -----------------
 --Output from testBuyInvalidPayment--
 --Output from testBuyValidPayment--
+--Output from testUploadCartNoShipping--
 --Output from testUploadCartValidPayment--
+--Output from testUploadCartWithShippingAddress--
 ------------- ---------------- ---------------
 
-Testcase: testBuyInvalidPayment took 0.126 sec
-Testcase: testBuyValidPayment took 0.386 sec
-Testcase: testUploadCartValidPayment took 0.131 sec
+Testcase: testBuyInvalidPayment took 0.202 sec
+Testcase: testBuyValidPayment took 0.372 sec
+Testcase: testUploadCartNoShipping took 0.131 sec
+Testcase: testUploadCartValidPayment took 0.075 sec
+Testcase: testUploadCartWithShippingAddress took 0.063 sec

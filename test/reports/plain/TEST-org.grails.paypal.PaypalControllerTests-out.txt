@@ -1,3 +1,5 @@
 --Output from testBuyInvalidPayment--
 --Output from testBuyValidPayment--
+--Output from testUploadCartNoShipping--
 --Output from testUploadCartValidPayment--
+--Output from testUploadCartWithShippingAddress--
