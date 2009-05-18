@@ -204,6 +204,9 @@ REQUEST INFO: ${params}
 		def url = new StringBuffer("$server?")
 		url << "cmd=_cart&upload=1&"
 		url << "business=$login&"
+		if (params.pageStyle) {
+			url << "page_style=${params.pageStyle}"
+		}
 		
 		if (params.addressOverride) {
 			url << "address_override=1&"
