@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="A38103.local" name="org.grails.paypal.PaymentTests" tests="1" time="1.308" timestamp="2009-05-05T02:55:41">
+<testsuite errors="0" failures="0" hostname="L090047.local" name="org.grails.paypal.PaymentTests" tests="1" time="0.697" timestamp="2009-05-18T02:57:10">
   <properties />
-  <testcase classname="org.grails.paypal.PaymentTests" name="testValidatePayment" time="1.261" />
+  <testcase classname="org.grails.paypal.PaymentTests" name="testValidatePayment" time="0.621" />
   <system-out><![CDATA[--Output from testValidatePayment--
 ]]></system-out>
   <system-err><![CDATA[--Output from testValidatePayment--

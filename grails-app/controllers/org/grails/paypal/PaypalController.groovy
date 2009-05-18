@@ -205,7 +205,7 @@ REQUEST INFO: ${params}
 		url << "cmd=_cart&upload=1&"
 		url << "business=$login&"
 		if (params.pageStyle) {
-			url << "page_style=${params.pageStyle}"
+			url << "page_style=${params.pageStyle}&"
 		}
 		
 		if (params.addressOverride) {
